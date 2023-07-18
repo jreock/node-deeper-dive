@@ -14,11 +14,11 @@ function calculateScore(pelletsEaten, ghostsEaten) {
 
 // Now let's test our function with assert
 try {
-    // The PacMan has eaten 50 pellets and 2 ghosts, so the score should be 900
+    // PacMan has eaten 50 pellets and 2 ghosts, so the score should be 900
     assert.strictEqual(calculateScore(50, 2), 900, 'PacMan score calculation failed');
     console.log('Score calculated correctly for 50 pellets and 2 ghosts eaten.');
 
-    // If the PacMan has eaten no pellets and no ghosts, the score should be 0
+    // PacMan has eaten no pellets and no ghosts, the score should be 0
     assert.strictEqual(calculateScore(0, 0), 0, 'PacMan score calculation failed');
     console.log('Score calculated correctly for no pellets and no ghosts eaten.');
 } catch (error) {
