@@ -2,8 +2,7 @@ var cluster = require('cluster');
 var http = require('http'); 
 
 if (cluster.isPrimary) { 
-  //var numWorkers = require('os').cpus().length;
-  var numWorkers = 4;
+  var numWorkers = require('os').cpus().length;
   var wids = [];
 
   console.log("Setting up " + numWorkers + " workers...");
@@ -13,15 +12,15 @@ if (cluster.isPrimary) {
   } 
 
   for (wid in cluster.workers) {
-    wids.push(wid);
+     wids.push(wid);
   }
 
   wids.forEach(function(wid) {
-    cluster.workers[wid].send({
-      type: 'shutdown',
-      from: 'primary'
-    });
-  });
+     cluster.workers[wid].send({
+        type: 'shutdown',
+        from: 'primary'
+     });
+  }); 
 
   cluster.on('online', function(worker) {
     console.log('Worker ' + worker.process.pid + ' is online!');
@@ -37,11 +36,13 @@ else {
   http.createServer(function(req, res)    { 
     res.writeHead(200); 
     res.end('process ' + process.pid + ' says hello!'); 
-  }).listen(8000);
-  process.on('message', function(message) {
+  }).listen(8000); 
+ 
+  process.on('message', function (message) {
+    console.log(message);
     if (message.type === 'shutdown') {
-      console.log('Shutting down worker ' + process.pid);
-      process.exit(0);
+       console.log('worker ' + process.pid + ' is shutting down!'); 
+       process.exit(0);
     }
   });
 }

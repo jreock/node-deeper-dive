@@ -1,0 +1,17 @@
+{
+  "name": "memoryleak",
+  "version": "1.0.0",
+  "description": "",
+  "main": "memory-leak.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "heapdump": "^0.3.15",
+    "node-gyp": "^8.4.1",
+    "npm": "^9.1.3"
+  }
+}
