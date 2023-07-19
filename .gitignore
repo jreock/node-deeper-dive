@@ -4,3 +4,5 @@ package-lock.json
 yarn.lock
 Streams/output.txt
 MemoryLeak/heap_snapshot*
+.vscode/
+
