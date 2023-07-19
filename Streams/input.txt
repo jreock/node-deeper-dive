@@ -1,3 +1,3 @@
-This is some great test input. All the alphabet is in here.
-Like really, where will you find better test input? Some "Hello World" file?
-I mean, sure, plenty of other, really great places, but just where else does a quick brown fox ride a zebra to Valhalla?
+This is some incomprehensive test input. All the English alphabet is in here, sort of, not all capitalizations are represented.
+Like still though, where will you find better test input? Some "Hello World" file?
+I mean, plenty of other really great places, but just where else does a quick brown fox ride a zebra to Valhalla?
