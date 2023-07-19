@@ -1,0 +1,19 @@
+{
+  "name": "streams",
+  "version": "1.0.0",
+  "description": "Streams example for the NodeJS Deeper Dive talk",
+  "main": "streams.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jreock/node-deeper-dive.git"
+  },
+  "author": "Justin Reock",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/jreock/node-deeper-dive/issues"
+  },
+  "homepage": "https://github.com/jreock/node-deeper-dive#readme"
+}

@@ -1,6 +1,6 @@
 // NodeJS Deeper Dive
-// This code creates a multi-process HTTP server using Node.js' Cluster module. In this version, the master process creates 
-// a fixed number of worker processes, instead of basing it on the number of CPU cores. The master process also sends a shutdown 
+// This code creates a multi-process HTTP server using Node.js' Cluster module. The main process creates 
+// a fixed number of worker processes, instead of basing it on the number of CPU cores. The main process also sends a shutdown 
 // message to each worker process. If a worker process receives a shutdown message, it gracefully shuts itself down.
 
 // Importing the necessary modules
