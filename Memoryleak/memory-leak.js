@@ -45,7 +45,7 @@ function getHeap() {
    var heap = process.memoryUsage().heapUsed;
    console.log("Using " + heap + " bytes of heap.");
    const heapSnapshotStream = v8.getHeapSnapshot();
-   heapSnapshotStream.pipe(fs.createWriteStream('heap_snapshot.heapsnapshot.' + Date.now()))
+   heapSnapshotStream.pipe(fs.createWriteStream('heap_snapshot.' + Date.now() + '.heapsnapshot'));
 }
 
 // We start two intervals: one that calls 'store' every 1 millisecond, and one that calls 'getHeap' every 2 seconds.
