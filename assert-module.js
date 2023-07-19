@@ -1,5 +1,5 @@
 // NodeJS Deeper Dive
-// In this script, we are using the assert module to test some logic specific to PacMan. We have two functions: 
+// In this script, we are using the assert module to test some logic specific to Namco's beloved PacMan. We have two functions: 
 // calculateScore() which calculates the score based on the number of pellets and ghosts eaten, and canProceedToNextLevel() 
 // which checks if PacMan has eaten all pellets in the current level. The assert.strictEqual() method checks if the function 
 // returns the expected values, if not, it throws an error with the message we provided. If all tests pass, we print out 
@@ -14,7 +14,7 @@ function calculateScore(pelletsEaten, ghostsEaten) {
 
 // Now let's test our function with assert
 try {
-    // PacMan has eaten 50 pellets and 2 ghosts, so the score should be 900
+    // PacMan has eaten 50 pellets and 2 ghosts, so the score should be 900 (50 * 10 for pellets + 2 * 200 for ghosts)
     assert.strictEqual(calculateScore(50, 2), 900, 'PacMan score calculation failed');
     console.log('Score calculated correctly for 50 pellets and 2 ghosts eaten.');
 
