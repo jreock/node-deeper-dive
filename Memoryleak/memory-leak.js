@@ -7,6 +7,8 @@
 
 // First, we import the 'heapdump' module, which provides a function to create a snapshot of the V8 heap.
 const {heapdump} = require('heapdump');
+const fs = require('fs');
+const v8 = require('node:v8');
 
 // We define two arrays: 'unsafeData' and 'safeData'.
 var unsafeData = [];
@@ -42,7 +44,8 @@ function store() {
 function getHeap() {
    var heap = process.memoryUsage().heapUsed;
    console.log("Using " + heap + " bytes of heap.");
-   require('v8').writeHeapSnapshot();
+   const heapSnapshotStream = v8.getHeapSnapshot();
+   heapSnapshotStream.pipe(fs.createWriteStream('heap_snapshot.heapsnapshot.' + Date.now()))
 }
 
 // We start two intervals: one that calls 'store' every 1 millisecond, and one that calls 'getHeap' every 2 seconds.
