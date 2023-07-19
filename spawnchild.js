@@ -15,7 +15,7 @@ const { spawn } = require('child_process');
 // which means that the child process should use the same stdio streams as the parent process.
 // We also set the 'shell' option to 'true', which means the command should be run inside a shell.
 const childProcess = spawn('ls', { 
-    stdio: 'inherit',
+    stdio: 'pipe',
     shell: true
 });
 
